@@ -12,7 +12,7 @@ import java.util.List;
 @Data
 @ToString
 public class TeachplanNode extends Teachplan {
-
+//树状结构的子节点
     List<TeachplanNode> children;
 
 }
