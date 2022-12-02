@@ -85,7 +85,7 @@ public class CourseService {
 //    单独定义一个方法,查询课程的根节点,如果查询不到,那么,就需要自动添加一个根节点
     private String getTeachplanRoot(String courseId){
         Optional<CourseBase> optional = courseBaseRepository.findById(courseId);//可以拿到一个optional
-        if (optional.isPresent())   {
+        if (!optional.isPresent())   {//注意这里有一个!的符号
             return null;
         }
         CourseBase courseBase = optional.get();//拿到课程
